@@ -1,6 +1,15 @@
 import React from 'react';
 
-export default ({ query, handleChange }) => {
+export type Query = {
+  title: string;
+};
+
+export type SearchParams = {
+  query: Query;
+  handleChange: (event: React.ChangeEvent) => void;
+};
+
+export default ({ query, handleChange }: SearchParams): React.ReactElement => {
   return (
     <div className="text-center p-10">
       <h1 className="font-bold text-4xl mb-4">
@@ -24,7 +33,9 @@ export default ({ query, handleChange }) => {
           </svg>
           <input
             value={query.title}
-            onChange={(e) => handleChange(e)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              handleChange(e)
+            }
             name="title"
             className="bg-gray-100 outline-none"
             type="text"

@@ -4,7 +4,14 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
 
-const rootElement = document.getElementById('app');
+let rootElement = document.getElementById('app');
+
+if (!rootElement) {
+  rootElement = document.createElement('div');
+  rootElement.setAttribute('id', 'app');
+  document.body.appendChild(rootElement);
+}
+
 const root = createRoot(rootElement);
 
 root.render(

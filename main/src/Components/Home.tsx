@@ -1,9 +1,18 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import Loader from './Loader';
 
-export default ({ loading, setLoading }) => {
+export type HomeParams = {
+  loading?: boolean;
+  setLoading: (loading: boolean) => void;
+};
+
+export default ({
+  loading = false,
+  setLoading
+}: HomeParams): React.ReactElement => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     if (!products.length) {
