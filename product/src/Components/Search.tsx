@@ -1,6 +1,16 @@
 import React from 'react';
 
-export default ({ query, handleChange }) => {
+export type Query = {
+  title: string;
+};
+
+export type SearchParams = {
+  query: Query;
+  handleChange: (event: React.ChangeEvent) => void;
+  handleSubmit: () => void;
+};
+
+export default ({ query, handleChange }: SearchParams) => {
   return (
     <div className="text-center p-10">
       <h1 className="font-bold text-4xl mb-4">

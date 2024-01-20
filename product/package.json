@@ -1,5 +1,5 @@
 {
-  "name": "kl-mf-app",
+  "name": "product",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
@@ -10,8 +10,8 @@
   },
   "license": "MIT",
   "author": {
-    "name": "Jack Herrington",
-    "email": "jherr@pobox.com"
+    "name": "Huan Li",
+    "email": "klx211@gmail.com"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -30,12 +30,14 @@
     "postcss-loader": "^4.1.0",
     "style-loader": "^3.3.0",
     "tailwindcss": "^2.0.2",
+    "ts-loader": "9.5.1",
     "typescript": "^5.3.3",
     "webpack": "^5.57.1",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
+    "@babel/runtime": "^7.13.10",
     "axios": "^1.6.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

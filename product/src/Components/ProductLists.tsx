@@ -21,7 +21,7 @@ export default () => {
     setProducts(data);
   }
 
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent) {
     setQuery({ ...query, [e.target.name]: e.target.value });
   }
 

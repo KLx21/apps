@@ -9,8 +9,11 @@ import Loader from './Components/Loader';
 import NotFound from './Components/NotFound';
 import Everything from './Components/Everything';
 
+// @ts-ignore
 const RemoteProductApp = React.lazy(() => import('product/ProductApp'));
+// @ts-ignore
 const RemoteOrderApp = React.lazy(() => import('order/OrderApp'));
+// @ts-ignore
 const RemoteDeliveryApp = React.lazy(() => import('delivery/DeliveryApp'));
 
 const App = () => {

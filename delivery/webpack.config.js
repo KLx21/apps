@@ -32,9 +32,15 @@ module.exports = (_, argv) => ({
       {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
+        use: [
+          {
+            loader: 'babel-loader'
+          },
+          {
+            loader: 'ts-loader',
+            options: { configFile: __dirname + '/tsconfig.json' }
+          }
+        ]
       }
     ]
   },
